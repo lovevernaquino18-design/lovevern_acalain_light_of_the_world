@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith & Technology | Light of the World</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #4b79a1, #283e51);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        color: #fff;
+    }
+
+    .content-box {
+        width: 90%;
+        max-width: 900px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 0 35px rgba(0,0,0,0.3);
+        animation: fadeIn 0.9s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+        font-size: 46px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+        font-weight: 400;
+        opacity: 0.95;
+    }
+
+    p {
+        font-size: 19px;
+        line-height: 1.7;
+        opacity: 0.95;
+        margin-bottom: 30px;
+    }
+
+    /* IMAGE SECTION - Medium Box */
+    .image-box {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+    }
+
+    .image-box img {
+        width: 100%;
+        max-width: 500px; /* medium size */
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        object-fit: cover;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-box img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+
+    /* Dropdown */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .menu-btn {
+        padding: 14px 25px;
+        font-size: 17px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        background: #0d6efd;
+        color: #fff;
+        transition: 0.3s;
+    }
+
+    .menu-btn:hover {
+        background: #004fcc;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.95);
+        min-width: 220px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        z-index: 1000;
+        overflow: hidden;
+        margin-top: 5px;
+    }
+
+    .dropdown-content a {
+        color: #333;
+        padding: 12px 20px;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        transition: 0.2s;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #0d6efd;
+        color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Logout Button */
+    .logout-btn {
+        margin-top: 25px;
+        padding: 12px 25px;
+        background: #dc3545;
+        border: none;
+        border-radius: 12px;
+        color: #fff;
+        font-size: 17px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .logout-btn:hover {
+        background: #b92c38;
+    }
+
+    @media (max-width: 600px) {
+        h1 { font-size: 36px; }
+        h2 { font-size: 22px; }
+        p { font-size: 17px; }
+        .image-box img { max-width: 90%; }
+    }
+
+</style>
+</head>
+<body>
+
+<div class="content-box">
+    <h1>Faith and Technology Integration</h1>
+    <h2>Faith & Technology</h2>
+    <p>
+        Technology can be used to spread hope, encouragement, and faith. 
+        When guided by values, digital platforms become tools for inspiration and service.
+    </p>
+
+    <!-- Medium Image -->
+    <div class="image-box">
+        <img src="faith.jpg" alt="Faith & Technology">
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown">
+        <button class="btn menu-btn">Menu ▾</button>
+        <div class="dropdown-content">
+            <a href="home.html">Home</a>
+            <a href="personal_reflection.html">Personal Reflection</a>
+            <a href="community_service.html">Community Service</a>
+            <a href="inspirational.html">Inspirational Portfolio</a>
+            <a href="educational.html">Educational</a>
+            <a href="faith-tech.html">Faith & Technology</a>
+        </div>
+    </div>
+
+    <!-- Logout Button -->
+    <button class="btn logout-btn" onclick="window.location.href='index.html'">Logout</button>
+
+</div>
+
+</body>
+</html>

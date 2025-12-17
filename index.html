@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Light of the World</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4b79a1, #283e51);
+            padding: 20px;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .site-title h1 {
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+
+        .site-title p {
+            font-size: 14px;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 35px 30px;
+            border-radius: 18px;
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.9s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* LOGO */
+        .logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+        }
+
+        .login-container h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .login-container h3 {
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .input-group {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            color: #e3e3e3;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-top: 6px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            font-size: 15px;
+            background: rgba(255, 255, 255, 0.28);
+            color: #fff;
+        }
+
+        .input-group input::placeholder {
+            color: #d6d6d6;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 13px;
+            margin-top: 25px;
+            background: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #004fcc;
+        }
+
+        .forgot {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .forgot a {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        
+        <div class="site-title">
+            <h1>Light of the World</h1>
+            <p>God First • Faith • Service • Technology</p>
+        </div>
+
+       
+        <div class="login-container">
+
+           
+            <img class="logo"
+                 src="login.jpg"
+                 alt="Logo">
+
+            <h2>Una ang Ginoo</h2>
+            
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input id="username" type="text" placeholder="Enter your username" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input id="password" type="password" placeholder="Enter your password" required>
+                </div>
+
+                <button class="btn-login" type="submit">Login</button>
+
+                <div class="forgot">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <div id="msg" class="message"></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const sampleUser = "admin";
+        const samplePass = "12345";
+
+        const form = document.getElementById("loginForm");
+        const msg = document.getElementById("msg");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            if (user === sampleUser && pass === samplePass) {
+                msg.style.color = "lightgreen";
+                msg.textContent = "Login Successful! Redirecting...";
+
+                setTimeout(() => {
+                    window.location.href = "dashboard.html";
+                }, 1500);
+            } else {
+                msg.style.color = "red";
+                msg.textContent = "Invalid username or password!";
+            }
+        });
+    </script>
+
+</body>
+</html>

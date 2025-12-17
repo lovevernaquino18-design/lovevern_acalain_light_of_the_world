@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #4b79a1, #283e51);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .dashboard-box {
+            width: 80%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 0 35px rgba(0,0,0,0.3);
+            animation: fadeIn 0.9s ease;
+            text-align: center;
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        .menu-buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .menu-btn {
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            background: #0d6efd;
+            color: #fff;
+            transition: 0.3s;
+            min-width: 220px;
+        }
+
+        .menu-btn:hover {
+            background: #004fcc;
+        }
+
+        .logout-btn {
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #dc3545;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #b92c38;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-box">
+        <h1>Welcome to the Dashboard</h1>
+         <p>Select a category to continue</p>
+        
+        
+
+        <div class="menu-buttons">
+            <button class="menu-btn" onclick="location.href='home.html'">
+               Home
+            </button>
+
+            <button class="menu-btn" onclick="location.href='personal_reflection.html'">
+                Personal Reflection
+            </button>
+
+            <button class="menu-btn" onclick="location.href='community_service.html'">
+                Community Service
+            </button>
+
+            <button class="menu-btn" onclick="location.href='inspirational.html'">
+                Inspirational Portfolio
+            </button>
+
+            <button class="menu-btn" onclick="location.href='educational.html'">
+                Educational
+            </button>
+
+            <button class="menu-btn" onclick="location.href='faith-tech.html'">
+                Faith & Technology
+            </button>
+        </div>
+
+        <button class="logout-btn" onclick="window.location.href='index.html'">
+            Logout
+        </button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Reflection | Light of the World</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4b79a1, #283e51);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .content-box {
+            width: 90%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 0 35px rgba(0,0,0,0.3);
+            animation: fadeIn 0.9s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+
+        p {
+            font-size: 19px;
+            line-height: 1.7;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        /* IMAGE SECTION */
+        .image-box {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .image-box img {
+            width: 100%;
+            max-width: 500px; /* Medium size */
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-box img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        /* BUTTONS AND DROPDOWN */
+        .btn-group {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 25px;
+            font-size: 17px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            color: #fff;
+            transition: 0.3s;
+            min-width: 180px;
+        }
+
+        .btn:hover { opacity: 0.9; }
+
+        .back-btn { background: #6c757d; }
+        .back-btn:hover { background: #565e64; }
+
+        .logout-btn { background: #dc3545; }
+        .logout-btn:hover { background: #b92c38; }
+
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-btn {
+            background: #0d6efd;
+        }
+        .menu-btn:hover { background: #004fcc; }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.95);
+            min-width: 220px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            z-index: 1000;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #0d6efd;
+            color: #fff;
+        }
+
+        .dropdown:hover .dropdown-content { display: block; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 36px; }
+            h2 { font-size: 22px; }
+            p { font-size: 17px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-box">
+        <h1>Personal Reflection</h1>
+        <h2>Personal Reflection</h2>
+        <p>
+            Being the Light of the World means choosing integrity, kindness, and respect. 
+            Even in the digital space, our actions should reflect our values and faith.
+        </p>
+
+        <div class="image-box">
+            <img src="personal.jpg" alt="Personal Reflection">
+        </div>
+
+      
+        <div class="btn-group">
+            <div class="dropdown">
+                <button class="btn menu-btn">Menu ▾</button>
+                <div class="dropdown-content">
+                    <a href="home.html">Home</a>
+                    <a href="personal_reflection.html">Personal Reflection</a>
+                    <a href="community_service.html">Community Service</a>
+                    <a href="inspirational.html">Inspirational Portfolio</a>
+                    <a href="educational.html">Educational</a>
+                    <a href="faith-tech.html">Faith & Technology</a>
+                </div>
+            </div>
+
+           
+            <button class="btn logout-btn" onclick="window.location.href='index.html'">
+                Logout
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
